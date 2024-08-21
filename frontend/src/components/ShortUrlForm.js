@@ -3,7 +3,6 @@ import { TextField, Button, Grid } from '@mui/material';
 import { shortUrl } from '../apis/shortUrl';
 import { ErrorPopup } from './ErrorPopUp';
 import { isValidUrl } from '../utils/urlHelper';
-import { API_ENDPOINTS } from '../config/apiConfig';
 
 export function ShortUrlForm({onShorten}) {
     const [url, setUrl] = useState('');
@@ -20,7 +19,7 @@ export function ShortUrlForm({onShorten}) {
       }
       
       try {
-        const data = await shortUrl(API_ENDPOINTS.shortenUrl);
+        const data = await shortUrl(url);
         onShorten(data.short_url);
         setErrorMsg('');
       } catch (error){

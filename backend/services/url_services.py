@@ -31,7 +31,6 @@ async def url_shortner(url: HttpUrl, db: Session) -> str:
 
 
 async def fetch_short_url(url_id: str, db: Session) -> ShortUrl:
-    print(f"####: {url_id}")
     try:
         short_url = db.query(ShortUrl).filter(ShortUrl.short_url == url_id).first()
     except SQLAlchemyError as e:

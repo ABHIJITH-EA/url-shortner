@@ -1,6 +1,8 @@
+import { API_ENDPOINTS } from '../config/apiConfig';
+
 export async function shortUrl(url) {
     try {
-        const response = await fetch(url, {
+        const response = await fetch(API_ENDPOINTS.shortenUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
