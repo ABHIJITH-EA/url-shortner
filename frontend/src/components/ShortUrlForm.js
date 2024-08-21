@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { TextField, Button, Grid } from '@mui/material';
 import { shortUrl } from '../apis/shortUrl';
 import { ErrorPopup } from './ErrorPopUp';
+import { isValidUrl } from '../utils/urlHelper';
+import { API_ENDPOINTS } from '../config/apiConfig';
 
 export function ShortUrlForm({onShorten}) {
     const [url, setUrl] = useState('');
@@ -10,9 +12,15 @@ export function ShortUrlForm({onShorten}) {
 
     const handleSubmit = async (event) => {
       event.preventDefault();
+
+      if(!isValidUrl(url)) {
+        setErrorMsg('Invalid URL format. Please enter a valid http/https URL.');
+        setOpenSnackbar(true);
+        return;
+      }
       
       try {
-        const data = await shortUrl(url);
+        const data = await shortUrl(API_ENDPOINTS.shortenUrl);
         onShorten(data.short_url);
         setErrorMsg('');
       } catch (error){

@@ -1,9 +1,10 @@
 import React from 'react';
 import { Box, Typography, Grid, IconButton, Button } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { API_ENDPOINTS } from '../config/apiConfig';
 
 export function DisplayShortUrl({ shortUrl }) {
-  const redirectUrl = `http://127.0.0.1:8000/api/${shortUrl}`;
+  const redirectUrl = API_ENDPOINTS.redirectUrl(shortUrl);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(redirectUrl);

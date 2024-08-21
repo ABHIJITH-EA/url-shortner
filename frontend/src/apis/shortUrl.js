@@ -1,8 +1,6 @@
-const BASE_API = "http://127.0.0.1:8000/api";
-
 export async function shortUrl(url) {
     try {
-        const response = await fetch(`${BASE_API}/short-url`, {
+        const response = await fetch(url, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
