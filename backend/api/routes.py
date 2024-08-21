@@ -1,3 +1,7 @@
+"""
+Defines the endpoints for handling URL shortening and redirect logic.
+"""
+
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session

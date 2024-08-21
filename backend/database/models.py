@@ -2,6 +2,14 @@ from sqlalchemy import Column, Integer, String, UniqueConstraint
 from .database import Base
 
 class ShortUrl(Base):
+    """
+        SQLAlchemy model representing a shortened URL.
+    
+        Attributes:
+        - id: primary key for the shortened URL
+        - original_url: the original long URL
+        - short_url: the shortened URL hash
+    """
     __tablename__ = 'short_url'
 
     id = Column(Integer, primary_key=True)
