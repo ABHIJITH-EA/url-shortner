@@ -3,12 +3,10 @@
 This project is a URL shortener application consisting of a backend built with FastAPI and a frontend built with React. It allows users to shorten long URLs and access the original URLs via shortened links. For more detailed documentation see [design.md](docs/design.md).
 
 ## Demo
-*Watch the demo of the application:*
 
-<video width="640" height="480" controls>
-  <source src="./docs/resource/working_demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+Watch the demo of the application:
+
+![Demo](docs/resource/working_demo.gif)
 
 ## Prerequisites
 
