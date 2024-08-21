@@ -3,12 +3,14 @@ import { Box, Typography, Grid, IconButton, Button } from '@mui/material';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 export function DisplayShortUrl({ shortUrl }) {
+  const redirectUrl = `http://127.0.0.1:8000/api/${shortUrl}`;
+
   const handleCopy = () => {
-    navigator.clipboard.writeText(shortUrl);
+    navigator.clipboard.writeText(redirectUrl);
   };
 
   const handleVisit = () => {
-    window.open(shortUrl, '_blank');
+    window.open(redirectUrl, '_blank');
   }
 
   if (!shortUrl) {
