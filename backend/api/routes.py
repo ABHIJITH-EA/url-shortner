@@ -2,14 +2,14 @@ from fastapi import APIRouter, Depends, HTTPException
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
-from api.schemas import ShortUrlRequest, ShortUrlResponse
-from services.url_service import url_shortner, fetch_short_url
+from api.schema import ShortUrlRequest, ShortUrlResponse
+from services.url_services import url_shortner, fetch_short_url
 from database.database import get_db
 
 shorturl_router = APIRouter()
 
-@shorturl_router.post("/short-url")
-async def short_url(req: ShortUrlRequest, db: Session = Depends(get_db)):
+@shorturl_router.post("/short-url", response_model=ShortUrlResponse)
+async def short_url(req: ShortUrlRequest, db: Session=Depends(get_db)):
     short_url = await url_shortner(req.url, db = db)
     
     return ShortUrlResponse(short_url=short_url)

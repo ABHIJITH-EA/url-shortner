@@ -6,6 +6,6 @@ class ShortUrl(Base):
 
     id = Column(Integer, primary_key=True)
     original_url = Column(String, unique=True, index=True)
-    short_url = Column(String)
+    short_url = Column(String, index=True)
 
     __table_args__ = (UniqueConstraint("original_url", name="unique_original_url"),)
