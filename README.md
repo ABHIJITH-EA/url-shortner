@@ -73,4 +73,4 @@ Watch the demo of the application:
 
 ## Troubleshooting
 
--  Make sure you have Node.js and npm installed, and dependencies are properly installed. Check the browser console for more details.
+-  Make sure you have Node.js and npm installed, and dependencies are properly installed.
