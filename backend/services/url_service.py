@@ -26,3 +26,12 @@ async def url_shortner(url: HttpUrl, db: Session) -> str:
         raise Exception('Handle SQL based exceptions')
 
     return short_url
+
+
+async def fetch_short_url(url_id: str, db: Session) -> ShortUrl:
+    try:
+        short_url = db.query(ShortUrl).filter(ShortUrl.short_url == url_id).first()
+    except Exception as e:
+        raise Exception('Handle SQL based exceptions')
+    
+    return short_url
