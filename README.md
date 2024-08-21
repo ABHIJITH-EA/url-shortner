@@ -6,7 +6,7 @@ This project is a URL shortener application consisting of a backend built with F
 *Watch the demo of the application:*
 
 <video width="640" height="480" controls>
-  <source src="docs/resource/working_demo.mp4" type="video/mp4">
+  <source src="./docs/resource/working_demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
