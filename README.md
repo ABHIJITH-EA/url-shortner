@@ -15,6 +15,12 @@ Watch the demo of the application:
 
 ## Backend Setup and Installation
 
+1. **Clone the repo:**
+   ```bash
+   https://github.com/ABHIJITH-EA/url-shortner.git
+
+   cd url-shortner
+   ```
 1. **Navigate to the backend directory:**
 
    ```bash
@@ -34,9 +40,13 @@ Watch the demo of the application:
    pip install -r requirements.txt
    ```
 
-5. **Initialize the database:**
+5. **Running the server:**
 
-   The database schema will be created when the application starts.
+   ```bash
+   fastapi dev app/main.py
+   ```
+
+   The backend will run on `http://127.0.0.1:8000`.
 
 ## Frontend Setup and Installation
 
@@ -52,28 +62,14 @@ Watch the demo of the application:
    npm install
    ```
 
-## Running the Application
-
-### Backend
-
-1. **Start the FastAPI backend server:**
-
-   ```bash
-   fastapi dev main.py
-   ```
-
-   The backend will run on `http://127.0.0.1:8000`.
-
-### Frontend
-
-1. **Start the React development server:**
+3. **Running the Application:**
 
    ```bash
    npm start
    ```
 
    The frontend will be available at `http://localhost:3000`.
-
+   
 
 ## Troubleshooting
 
