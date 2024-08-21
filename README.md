@@ -1,6 +1,12 @@
 # URL Shortener Application
 
-This project is a URL shortener application consisting of a backend built with FastAPI and a frontend built with React. It allows users to shorten long URLs and access the original URLs via shortened links.
+This project is a URL shortener application consisting of a backend built with FastAPI and a frontend built with React. It allows users to shorten long URLs and access the original URLs via shortened links. For more detailed documentation see [design.md](docs/design.md).
+
+## Demo
+
+Watch the demo of the application:
+
+![Demo](docs/resource/working_demo.webm)
 
 ## Prerequisites
 
