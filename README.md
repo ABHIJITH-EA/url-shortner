@@ -6,7 +6,7 @@ This project is a URL shortener application consisting of a backend built with F
 
 Watch the demo of the application:
 
-![Demo](docs/resource/working_demo.webm)
+![Demo](docs/resource/working_demo.mp4)
 
 ## Prerequisites
 
