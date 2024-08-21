@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Container, Box, Typography } from '@mui/material';
 
-import { ShortUrlForm } from './components/shortUrlForm';
+import { ShortUrlForm } from './components/ShortUrlForm';
+import { DisplayShortUrl } from './components/DisplayShortUrl';
 
 function App() {
   const [shortUrl, setShortUrl] = useState('');
@@ -13,6 +14,9 @@ function App() {
         URL Shortener
       </Typography>
       <ShortUrlForm onShorten = {setShortUrl}/>
+      { shortUrl && (
+        <DisplayShortUrl shortUrl={shortUrl} />
+      )}
       </Box>
     </Container>
   );
