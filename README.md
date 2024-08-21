@@ -18,7 +18,8 @@ Watch the demo of the application:
 1. **Clone the repo:**
    ```bash
    git clone https://github.com/ABHIJITH-EA/url-shortner.git
-
+   ```
+   ```bash
    cd url-shortner
    ```
 1. **Navigate to the backend directory:**
